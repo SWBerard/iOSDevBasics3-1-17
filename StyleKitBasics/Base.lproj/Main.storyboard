@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StyleKitBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1B-xn-unM" customClass="PCView" customModule="StyleKitBasics" customModuleProvider="target">
+                                <rect key="frame" x="20" y="28" width="133" height="75"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="8LQ-s2-h5q"/>
+                                    <constraint firstAttribute="height" constant="75" id="Lo2-Xq-Ysz"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWV-Vg-LJj" customClass="SelectButton" customModule="StyleKitBasics" customModuleProvider="target">
+                                <rect key="frame" x="450" y="363.5" width="124" height="41"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="1v2-9R-4Je"/>
+                                    <constraint firstAttribute="height" constant="41" id="p6p-mL-Ajd"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="zKA-1l-bdr" appends="YES" id="cqC-BC-IWe"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JR-ua-Ym6">
+                                <rect key="frame" x="486" y="209" width="52" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="0.2666666667" green="0.86274509799999999" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1u3-Zc-VPA" customClass="CircleGraph" customModule="StyleKitBasics" customModuleProvider="target">
+                                <rect key="frame" x="429.5" y="485" width="165" height="162"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="5bL-Ja-SCs"/>
+                                    <constraint firstAttribute="height" constant="162" id="7hl-cc-ZIE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="percent">
+                                        <real key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="qeg-U7-nEn">
+                                <rect key="frame" x="427.5" y="447" width="169" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="xTt-db-T78"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3x-RB-oWz">
+                                <rect key="frame" x="491" y="556" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q1B-xn-unM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="8nk-Yu-CPb"/>
+                            <constraint firstItem="3JR-ua-Ym6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="95m-cd-EF9"/>
+                            <constraint firstItem="qeg-U7-nEn" firstAttribute="trailing" secondItem="1u3-Zc-VPA" secondAttribute="trailing" id="HCm-6B-WUC"/>
+                            <constraint firstItem="IWV-Vg-LJj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="N5p-Bg-8Ul"/>
+                            <constraint firstItem="1u3-Zc-VPA" firstAttribute="top" secondItem="qeg-U7-nEn" secondAttribute="bottom" constant="8" id="NGy-qH-z2P"/>
+                            <constraint firstItem="IWV-Vg-LJj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QBQ-zq-VK4"/>
+                            <constraint firstItem="3JR-ua-Ym6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="189" id="THj-er-Ool"/>
+                            <constraint firstItem="1u3-Zc-VPA" firstAttribute="top" secondItem="IWV-Vg-LJj" secondAttribute="bottom" constant="80.5" id="cnp-IJ-7Gq"/>
+                            <constraint firstItem="F3x-RB-oWz" firstAttribute="centerY" secondItem="1u3-Zc-VPA" secondAttribute="centerY" id="gac-0J-CEq"/>
+                            <constraint firstItem="qeg-U7-nEn" firstAttribute="leading" secondItem="1u3-Zc-VPA" secondAttribute="leading" id="jJg-RM-M7Y"/>
+                            <constraint firstItem="F3x-RB-oWz" firstAttribute="centerX" secondItem="1u3-Zc-VPA" secondAttribute="centerX" id="uiw-nh-0kZ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="q1B-xn-unM" secondAttribute="leading" id="wh2-3H-TNF"/>
+                            <constraint firstItem="1u3-Zc-VPA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zMs-cr-AlZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="circleGraph" destination="1u3-Zc-VPA" id="QWc-BF-rjz"/>
+                        <outlet property="percentLabel" destination="F3x-RB-oWz" id="Rq3-HQ-fWh"/>
+                        <outlet property="titleLabel" destination="3JR-ua-Ym6" id="6UL-9z-l6i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="cm5-v2-sKN" customClass="MyStyleKit" customModule="StyleKitBasics" customModuleProvider="target"/>
+                <tapGestureRecognizer id="zKA-1l-bdr" userLabel="Select Button Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="userTappedSelectButton:" destination="BYZ-38-t0r" id="UW7-Xf-BEk"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="32.2265625" y="36.71875"/>
+        </scene>
+    </scenes>
+</document>

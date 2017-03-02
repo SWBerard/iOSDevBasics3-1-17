@@ -1,0 +1,6 @@
+framework module Pods_StyleKitBasics {
+  umbrella header "Pods-StyleKitBasics-umbrella.h"
+
+  export *
+  module * { export * }
+}
